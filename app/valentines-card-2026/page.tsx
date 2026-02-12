@@ -1,7 +1,7 @@
 import ValentinesCardComponent from "../components/ValentinesCardComponent"
 
 const headline = `Roses are Red, 
-Farts are mostly from You. I Love ❤️ You!`
+Farts are mostly from You! I Love You! ❤️`
 
 const text = `Dear Azure,
 
