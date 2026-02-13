@@ -7,7 +7,7 @@ import Image from 'next/image';
 const MusicButton = () => {
 
   const ref = useRef(null);
-  const [play, setPlay] = useState(false);
+  const [play, setPlay] = useState(true);
 
   const handlePlay = () => {
     setPlay(!play);

@@ -14,14 +14,16 @@ interface ValentinesCardProps {
 }
 const ValentinesCardComponent = ({backgroundColor, text, image, headline, year}: ValentinesCardProps) => {
   return (
-    <div className={`text-black justify-center flex flex-col h-screen ${backgroundColor || 'bg-pink-100'}`}>
-<div className='p-5'>
+    <div className={`min-h-screen w-full flex flex-col text-black ${
+    backgroundColor || 'bg-pink-100'
+  }`}>
+<div className='p-8'>
 
         <MusicButton />
 </div>
           
-          <div className='flex flex-col md:flex-row space-y-12  justify-around items-center w-full '>
-            <div className='text-center w-1/3 items-center space-y-12'>
+         <div className='flex flex-col md:flex-row space-y-12 justify-around items-center p-10 rounded-lg bg-white w-7/8 mx-auto'>
+            <div className='text-center w-1/3 items-center space-y-12 p-5'>
                 <div className='font-bold text-5xl'>Valentines {year}</div>
                 <span>{headline}</span>
             </div>
@@ -33,7 +35,7 @@ const ValentinesCardComponent = ({backgroundColor, text, image, headline, year}:
                 animate={{ y: 0, filter: 'blur(0px)' }} transition={{ duration: 1 }}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}>
-                    <Image className='rounded-lg' width={600} height={600} src={`/images/${image}`} alt="Valentine's card image" />
+                    <Image className='rounded-lg' width={500} height={500} src={`/images/${image}`} alt="Valentine's card image" />
                     </motion.div>
             }
 
