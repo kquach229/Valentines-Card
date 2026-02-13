@@ -24,11 +24,11 @@ const ValentinesCardComponent = ({backgroundColor, text, image, headline, year}:
 
           <div className='w-1/2 text-left space-y-20 flex flex-col items-center'>
             <span className={`text-center ${greatVibes.className} text-3xl`}>{text}</span>
-            {image && <motion.div initial={{ y: 10, filter: 'blur(10px)' }}
+            {image && <motion.div className='' initial={{ y: 10, filter: 'blur(10px)' }}
                 animate={{ y: 0, filter: 'blur(0px)' }} transition={{ duration: 1 }}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}>
-                    <Image className='rounded-lg' width={500} height={500} src={`/images/${image}`} alt="Valentine's card image" />
+                    <Image className='rounded-lg' width={600} height={600} src={`/images/${image}`} alt="Valentine's card image" />
                     </motion.div>
             }
 
