@@ -4,6 +4,7 @@
 import Image from 'next/image'
 import {motion} from 'framer-motion'
 import { greatVibes } from '../styles/fonts';
+import MusicButton from './MusicButton';
 interface ValentinesCardProps {
   backgroundColor?: string;
   text: string;
@@ -14,6 +15,10 @@ interface ValentinesCardProps {
 const ValentinesCardComponent = ({backgroundColor, text, image, headline, year}: ValentinesCardProps) => {
   return (
     <div className={`text-black justify-center flex flex-col h-screen ${backgroundColor || 'bg-pink-100'}`}>
+<div className='p-5'>
+
+        <MusicButton />
+</div>
           
           <div className='flex flex-col md:flex-row space-y-12  justify-around items-center w-full '>
             <div className='text-center w-1/3 items-center space-y-12'>

@@ -1,37 +1,37 @@
-// 'use client';
+'use client';
 
-// import React, { useContext, useRef, useState } from 'react';
-// import Image from 'next/image';
+import  { useContext, useRef, useState } from 'react';
+import Image from 'next/image';
 
 
-// const MusicButton = () => {
+const MusicButton = () => {
 
-//   const ref = useRef(null);
-//   const [play, setPlay] = useState(false);
+  const ref = useRef(null);
+  const [play, setPlay] = useState(false);
 
-//   const handlePlay = () => {
-//     setPlay(!play);
+  const handlePlay = () => {
+    setPlay(!play);
 
-//     if (!play) {
-//       ref.current.play();
-//     } else {
-//       ref.current.pause();
-//     }
-//   };
-//   return (
-//     <div>
-//       <Image
+    if (!play) {
+      ref.current.play();
+    } else {
+      ref.current.pause();
+    }
+  };
+  return (
+    <div>
+      <Image
        
-//         src={play ? '/stopIcon.svg' : '/playIcon.svg'}
+        src={play ? '/stop-button.svg' : '/playIcon.svg'}
   
-//         width={40}
-//         height={40}
-//         onClick={handlePlay}
-//         alt='icon'
-//       />
-//       <audio src='/audio/audo.mp3' ref={ref} loop />
-//     </div>
-//   );
-// };
+        width={40}
+        height={40}
+        onClick={handlePlay}
+        alt='icon'
+      />
+      <audio src='/audio/jjlin.mp3' ref={ref} loop />
+    </div>
+  );
+};
 
-// export default MusicButton;
+export default MusicButton;
