@@ -1,5 +1,6 @@
+'use client'
 import Image from 'next/image'
-
+import {motion} from 'framer-motion'
 interface ValentinesCardProps {
   backgroundColor?: string;
   text: string;
@@ -20,9 +21,16 @@ const ValentinesCardComponent = ({backgroundColor, text, image, headline, year}:
 
           <div className='w-1/2 text-left space-y-20 flex flex-col items-center'>
             <span className='text-center'>{text}</span>
-            {image && <Image className='rounded-lg' width={500} height={500} src={`/images/${image}`} alt="Valentine's card image" />}
+            {image && <motion.div initial={{ y: 10, filter: 'blur(10px)' }}
+                animate={{ y: 0, filter: 'blur(0px)' }} transition={{ duration: 1 }}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}>
+                    <Image className='rounded-lg' width={500} height={500} src={`/images/${image}`} alt="Valentine's card image" />
+                    </motion.div>
+            }
+
+            
           </div>
-          
           </div>
           
          
